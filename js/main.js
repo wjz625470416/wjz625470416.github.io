@@ -1,16 +1,15 @@
 const photos = [
-  { src: 'images/01.jpg', title: '森林光束', location: '自然 · 西北' },
-  { src: 'images/02.jpg', title: '雾中湖岸', location: '风光 · 挪威' },
-  { src: 'images/03.jpg', title: '林间小径', location: '森林 · 德国' },
-  { src: 'images/04.jpg', title: '海岸余晖', location: '海洋 · 加州' },
-  { src: 'images/05.jpg', title: '湖畔倒影', location: '湖泊 · 加拿大' },
-  { src: 'images/06.jpg', title: '瀑布秘境', location: '瀑布 · 冰岛' },
-  { src: 'images/07.jpg', title: '星空之下', location: '星空 · 犹他' },
-  { src: 'images/08.jpg', title: '沙漠弧线', location: '沙漠 · 撒哈拉' },
-  { src: 'images/09.jpg', title: '雪峰星夜', location: '雪山 · 喜马拉雅' },
-  { src: 'images/10.jpg', title: '绿野牧歌', location: '草原 · 新西兰' },
-  { src: 'images/11.jpg', title: '城市天际', location: '城市 · 东京' },
-  { src: 'images/hero.jpg', title: '雪山晨曦', location: '高山 · 瑞士' },
+  { src: 'images/01.jpg', title: '巅峰行者', location: '风光 · 山峦' },
+  { src: 'images/02.jpg', title: '云雾山谷', location: '苏格兰 · 斯凯岛' },
+  { src: 'images/03.jpg', title: '林间小径', location: '森林 · 自然' },
+  { src: 'images/04.jpg', title: '都市行迹', location: '街拍 · 城市' },
+  { src: 'images/05.jpg', title: '湖上舟影', location: '意大利 · 布莱耶斯湖' },
+  { src: 'images/06.jpg', title: '双层瀑布', location: '美国 · 俄勒冈' },
+  { src: 'images/07.jpg', title: '逆光草海', location: '自然 · 黄昏' },
+  { src: 'images/08.jpg', title: '海平落日', location: '海洋 · 黄昏' },
+  { src: 'images/09.jpg', title: '银河雪山', location: '星空 · 长曝光' },
+  { src: 'images/10.jpg', title: '石阵夕照', location: '苏格兰 · 仙女谷' },
+  { src: 'images/11.jpg', title: '雪岭晴空', location: '高山 · 风光' },
 ];
 
 const header = document.getElementById('header');
