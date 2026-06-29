@@ -1,19 +1,18 @@
 const photos = [
-  { src: 'images/01.jpg', title: '森林光束', location: 'Forest · Pacific Northwest' },
-  { src: 'images/02.jpg', title: '雾中湖岸', location: 'Lake · Norway' },
-  { src: 'images/03.jpg', title: '林间小径', location: 'Woodland · Germany' },
-  { src: 'images/04.jpg', title: '海岸余晖', location: 'Ocean · California' },
-  { src: 'images/05.jpg', title: '湖畔倒影', location: 'Lake · Canada' },
-  { src: 'images/06.jpg', title: '瀑布秘境', location: 'Waterfall · Iceland' },
-  { src: 'images/07.jpg', title: '星空之下', location: 'Night Sky · Utah' },
-  { src: 'images/08.jpg', title: '沙漠弧线', location: 'Desert · Sahara' },
-  { src: 'images/09.jpg', title: '雪峰星夜', location: 'Mountain · Himalaya' },
-  { src: 'images/10.jpg', title: '绿野牧歌', location: 'Meadow · New Zealand' },
-  { src: 'images/11.jpg', title: '城市天际', location: 'City · Tokyo' },
-  { src: 'images/hero.jpg', title: '雪山晨曦', location: 'Alpine · Switzerland' },
+  { src: 'images/01.jpg', title: '森林光束', location: '自然 · 西北' },
+  { src: 'images/02.jpg', title: '雾中湖岸', location: '风光 · 挪威' },
+  { src: 'images/03.jpg', title: '林间小径', location: '森林 · 德国' },
+  { src: 'images/04.jpg', title: '海岸余晖', location: '海洋 · 加州' },
+  { src: 'images/05.jpg', title: '湖畔倒影', location: '湖泊 · 加拿大' },
+  { src: 'images/06.jpg', title: '瀑布秘境', location: '瀑布 · 冰岛' },
+  { src: 'images/07.jpg', title: '星空之下', location: '星空 · 犹他' },
+  { src: 'images/08.jpg', title: '沙漠弧线', location: '沙漠 · 撒哈拉' },
+  { src: 'images/09.jpg', title: '雪峰星夜', location: '雪山 · 喜马拉雅' },
+  { src: 'images/10.jpg', title: '绿野牧歌', location: '草原 · 新西兰' },
+  { src: 'images/11.jpg', title: '城市天际', location: '城市 · 东京' },
+  { src: 'images/hero.jpg', title: '雪山晨曦', location: '高山 · 瑞士' },
 ];
 
-const galleryGrid = document.getElementById('galleryGrid');
 const header = document.getElementById('header');
 const menuBtn = document.getElementById('menuBtn');
 const nav = document.querySelector('.nav');
@@ -23,21 +22,12 @@ const lightboxCaption = document.getElementById('lightboxCaption');
 const lightboxClose = document.getElementById('lightboxClose');
 const lightboxPrev = document.getElementById('lightboxPrev');
 const lightboxNext = document.getElementById('lightboxNext');
+const galleryItems = document.querySelectorAll('.gallery-item');
 
 let currentIndex = 0;
 
-photos.forEach((photo, index) => {
-  const item = document.createElement('article');
-  item.className = 'gallery-item';
-  item.innerHTML = `
-    <img src="${photo.src}" alt="${photo.title}" loading="lazy">
-    <div class="gallery-item-info">
-      <h3>${photo.title}</h3>
-      <span>${photo.location}</span>
-    </div>
-  `;
+galleryItems.forEach((item, index) => {
   item.addEventListener('click', () => openLightbox(index));
-  galleryGrid.appendChild(item);
 });
 
 const observer = new IntersectionObserver(
@@ -52,7 +42,7 @@ const observer = new IntersectionObserver(
   { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
 );
 
-document.querySelectorAll('.gallery-item').forEach((el) => observer.observe(el));
+galleryItems.forEach((el) => observer.observe(el));
 
 window.addEventListener('scroll', () => {
   header.classList.toggle('scrolled', window.scrollY > 60);
@@ -90,7 +80,7 @@ function updateLightbox() {
   const photo = photos[currentIndex];
   lightboxImg.src = photo.src;
   lightboxImg.alt = photo.title;
-  lightboxCaption.textContent = `${photo.title} — ${photo.location}`;
+  lightboxCaption.textContent = photo.title + ' — ' + photo.location;
 }
 
 lightboxClose.addEventListener('click', closeLightbox);

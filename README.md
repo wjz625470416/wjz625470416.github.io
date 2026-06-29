@@ -1,30 +1,15 @@
-﻿# WJZ · 光影摄影
+# WJZ · 光影摄影
 
 现代简约个人摄影作品集，托管于 GitHub Pages 个人主站。
 
 ## 在线访问
 
-| 地址 | 说明 |
-|------|------|
-| https://wjz625470416.github.io | 个人主站（已开启 Pages） |
-| https://photo.wjz625470416.com | 自定义域名（需配置 DNS） |
+https://wjz625470416.github.io
 
 ## 仓库
 
-公有仓库：https://github.com/wjz625470416/wjz625470416.github.io
-
-## 本地预览
-
-```bash
-python -m http.server 8080
-```
+https://github.com/wjz625470416/wjz625470416.github.io
 
 ## 替换图片
 
-编辑 `js/main.js` 中的 `photos` 数组。
-
-## 自定义域名
-
-1. DNS 添加 CNAME：`photo` → `wjz625470416.github.io`
-2. GitHub 仓库 Settings → Pages → Custom domain 填入域名
-3. 勾选 Enforce HTTPS
+编辑 `index.html` 中的作品列表，或修改 `js/main.js` 中的 `photos` 数组。
